@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arion Racing | The Hercules</title>
+    <meta
+      name="description"
+      content="The Hercules, Arion Racing's Stem Racing car showcase with interactive specification and race design."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="car.css" />
+  </head>
+  <body class="car-page">
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <canvas id="particle-field" aria-hidden="true"></canvas>
+
+    <header class="site-header car-header">
+      <div class="site-header-inner">
+        <div class="brand-wrap">
+          <img class="logo-mark" src="assets/arion-racing.png" alt="Arion Racing logo" />
+          <div>
+            <p class="kicker">Interactive Specification</p>
+            <h1>The Hercules</h1>
+          </div>
+        </div>
+        <nav class="top-nav car-nav" aria-label="Car navigation">
+          <a href="#overview">Overview</a>
+          <a href="#model">Model</a>
+          <a href="#specs">Specs</a>
+          <a href="#build">Build</a>
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="car-main">
+      <section id="overview" class="section reveal car-hero">
+        <p class="car-eyebrow">Arion Racing STEM Racing</p>
+        <h2 class="car-title">The <span>Hercules</span></h2>
+        <p class="car-lead">
+          Our race car is tuned as an Arion Racing statement: sharp, technical,
+          and built to feel fast even at rest.
+        </p>
+        <div class="car-status"><span></span>Aero performance active</div>
+
+        <div class="car-shell interactive-3d">
+          <div class="car-gate" data-car-gate>
+            <p class="gate-label">Classified Access</p>
+            <h3>Unlock Hercules Specification</h3>
+            <p>Enter the Arion code to reveal the model and race package.</p>
+            <form class="gate-form" data-car-auth>
+              <input type="text" placeholder="PASSCODE" aria-label="Access code" />
+              <button type="submit">Authorize</button>
+            </form>
+            <p class="gate-foot">Fueling the grid with Arion Gold precision.</p>
+          </div>
+
+          <div class="car-model-stage" data-car-stage>
+            <div class="car-viewer-wrap">
+              <model-viewer
+                id="car-viewer"
+                class="model-viewer"
+                src="assets/arion-car.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                exposure="1.1"
+                environment-image="neutral"
+                alt="Arion Racing Hercules model"
+              >
+                <div class="model-fallback" id="model-fallback">Loading Hercules...</div>
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="model" class="section reveal specs-section">
+        <div class="section-head">
+          <p class="kicker">Specification</p>
+          <h2>Built For Arion Racing</h2>
+        </div>
+
+        <div class="spec-grid">
+          <article class="spec-card interactive-3d">
+            <p class="spec-badge">01 / AERO</p>
+            <h3>Streamlined for Stability</h3>
+            <p>
+              Hercules uses a tight front profile, clean volume transitions, and
+              a race-focused balance between drag reduction and composure.
+            </p>
+          </article>
+
+          <article class="spec-card interactive-3d">
+            <p class="spec-badge">02 / CHASSIS</p>
+            <h3>Light, Strong, Controlled</h3>
+            <p>
+              The body language is kept minimal and efficient, helping Arion
+              Racing target dependable build quality and repeatable results.
+            </p>
+          </article>
+
+          <article class="spec-card interactive-3d">
+            <p class="spec-badge">03 / BALANCE</p>
+            <h3>Track-Ready Geometry</h3>
+            <p>
+              Our wheelbase, cockpit massing, and rear profile work together to
+              keep the car predictable in a straight line and clean through the run.
+            </p>
+          </article>
+
+          <article class="spec-card interactive-3d">
+            <p class="spec-badge">04 / IDENTITY</p>
+            <h3>Arion Signature</h3>
+            <p>
+              Hercules carries Arion Racing's sharp black-and-gold language with
+              a subtle violet glow for a premium competition presence.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="specs" class="section reveal detail-section">
+        <div class="section-head">
+          <p class="kicker">Car Notes</p>
+          <h2>Arion-specific detailing</h2>
+        </div>
+
+        <div class="detail-grid">
+          <article class="detail-card interactive-3d">
+            <p class="detail-tag">Arion Gold</p>
+            <h3>Edge accents with intent</h3>
+            <p>
+              Hercules uses gold as a precision highlight instead of a heavy
+              fill, keeping the car visually sharp and competition-ready.
+            </p>
+          </article>
+
+          <article class="detail-card interactive-3d">
+            <p class="detail-tag">Black Core</p>
+            <h3>Low-noise silhouette</h3>
+            <p>
+              The dark body mass makes the model feel lean and serious, while
+              the lighter highlights give it a premium prototype look.
+            </p>
+          </article>
+
+          <article class="detail-card interactive-3d">
+            <p class="detail-tag">Violet Aura</p>
+            <h3>Arion's signature glow</h3>
+            <p>
+              A subtle violet energy layer separates Hercules from generic
+              race-car renders and ties it back to the Arion identity.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="build" class="section reveal build-section">
+        <div class="build-grid">
+          <div class="build-story">
+            <p class="kicker">Build Philosophy</p>
+            <h2>Quiet, focused, and competition-driven.</h2>
+            <p class="build-text">
+              Hercules is designed to look intentional from every angle. The
+              sculpted form, hidden structure, and confident stance give it the
+              same premium feel we want Arion Racing to project on the pit table.
+            </p>
+            <a class="button-link" href="index.html#model">Back to Team Site</a>
+          </div>
+
+          <div class="build-stack">
+            <article class="build-card interactive-3d">
+              <h3>Design Intent</h3>
+              <p>Fast silhouette, controlled airflow, and a visual identity that feels unmistakably Arion.</p>
+            </article>
+            <article class="build-card interactive-3d">
+              <h3>Race Focus</h3>
+              <p>Hercules is shaped to stay calm under speed, with geometry optimized for reliable performance.</p>
+            </article>
+            <article class="build-card interactive-3d">
+              <h3>Showcase Ready</h3>
+              <p>A dark, cinematic presentation makes the model feel more like a prototype launch than a class project.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <div class="footer-brand">
+        <img class="logo-mark footer-logo" src="assets/arion-racing.png" alt="Arion Racing logo" />
+        <div>
+          <p>Arion Racing | The Hercules</p>
+          <p class="muted">Black, gold, and violet Arion performance cues</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

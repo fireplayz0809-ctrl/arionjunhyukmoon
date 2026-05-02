@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arion Racing | Stem Racing</title>
+    <meta
+      name="description"
+      content="Arion Racing official Stem Racing website: engineering journey, team, sponsors, and race development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <canvas id="particle-field" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-wrap">
+          <img class="logo-mark" src="assets/arion-racing.png" alt="Arion Racing logo" />
+          <div>
+            <p class="kicker">Stem Racing Team</p>
+            <h1>Arion Racing</h1>
+          </div>
+        </div>
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#story">Story</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#model">Model</a>
+          <a href="car.html">Car</a>
+          <a href="#team">Team</a>
+          <a href="#sponsors">Sponsors</a>
+          <a href="socials.html">Socials</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section reveal stage">
+        <div class="hero-bg-lines" aria-hidden="true"></div>
+        <p class="kicker">Official Team Website</p>
+        <h2>Arion Racing builds race-ready engineering for Stem Racing.</h2>
+        <p class="lead">
+          This is our full competition platform: concept to CAD, testing to
+          manufacture, portfolio to pit display. Explore the complete development
+          story below.
+        </p>
+        <div class="hero-actions">
+          <a class="button-link" href="#story">Start The Story</a>
+          <a class="button-link ghost" href="#sponsors">Sponsor Us</a>
+        </div>
+        <div class="stats-row">
+          <article class="stat interactive-3d">
+            <p class="stat-number metric-value" data-target="8">0</p>
+            <p class="stat-label">Sponsors</p>
+          </article>
+          <article class="stat interactive-3d">
+            <p class="stat-number metric-value" data-target="2450">0</p>
+            <p class="stat-label">Instagram</p>
+          </article>
+          <article class="stat interactive-3d">
+            <p class="stat-number metric-value" data-target="1320">0</p>
+            <p class="stat-label">TikTok</p>
+          </article>
+          <article class="stat interactive-3d">
+            <p class="stat-number metric-value" data-target="980">0</p>
+            <p class="stat-label">Youtube</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-head">
+          <p class="kicker">What We Do</p>
+          <h2>Engineering + Branding + Delivery</h2>
+        </div>
+        <div class="three-col">
+          <article class="interactive-3d"><h3>Performance</h3><p>Aerodynamics, geometry optimization, and stable race execution.</p></article>
+          <article class="interactive-3d"><h3>Precision</h3><p>Controlled CAD workflow and manufacturing-ready outputs.</p></article>
+          <article class="interactive-3d"><h3>Presentation</h3><p>Clear communication for judges, sponsors, and public showcases.</p></article>
+        </div>
+      </section>
+
+      <section id="story" class="section sticky-story reveal">
+        <div class="section-head">
+          <p class="kicker">Team Growth</p>
+          <h2>Our Development Story</h2>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-sticky">
+            <div class="story-panel" id="story-panel">
+              <p class="story-step-label" id="story-label">Phase 01</p>
+              <h3 id="story-title">Research and Concept Direction</h3>
+              <p id="story-text">
+                We begin by mapping constraints, race goals, and design options,
+                then lock a direction that balances speed and manufacturability.
+              </p>
+              <div class="story-image placeholder-image" id="story-image">Concept Placeholder</div>
+            </div>
+          </div>
+
+          <div class="story-scroll" id="story-scroll">
+            <article class="story-item" data-label="Phase 01" data-title="Research and Concept Direction" data-text="We begin by mapping constraints, race goals, and design options, then lock a direction that balances speed and manufacturability." data-image="Concept Placeholder"></article>
+            <article class="story-item" data-label="Phase 02" data-title="CAD Blockout and Refinement" data-text="Body shape, wheelbase, and key transitions are developed in CAD with repeatable checkpoints and revision loops." data-image="CAD Placeholder"></article>
+            <article class="story-item" data-label="Phase 03" data-title="Aerodynamic Testing and Feedback" data-text="We evaluate drag-sensitive zones, smooth transitions, and revise geometry based on evidence from test feedback." data-image="Aero Placeholder"></article>
+            <article class="story-item" data-label="Phase 04" data-title="Manufacturing and Validation" data-text="Final geometry is prepared for production with dimensional checks and race-readiness validation." data-image="Manufacturing Placeholder"></article>
+            <article class="story-item" data-label="Phase 05" data-title="Portfolio and Pitch Delivery" data-text="Our final stage aligns technical evidence, branding, and verbal presentation for judging and sponsors." data-image="Presentation Placeholder"></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section reveal">
+        <div class="section-head">
+          <p class="kicker">Team Gallery</p>
+          <h2>Photo Placeholders</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="placeholder-image tall interactive-3d">Workshop Shot 01</div>
+          <div class="placeholder-image interactive-3d">CAD Screen 01</div>
+          <div class="placeholder-image interactive-3d">Pit Display 01</div>
+          <div class="placeholder-image wide interactive-3d">Race Day Team Image</div>
+          <div class="placeholder-image interactive-3d">Manufacturing 01</div>
+          <div class="placeholder-image interactive-3d">Testing 01</div>
+          <div class="placeholder-image interactive-3d">Branding 01</div>
+          <div class="placeholder-image tall interactive-3d">Presentation Rehearsal</div>
+        </div>
+      </section>
+
+      <section id="model" class="section reveal">
+        <div class="section-head">
+          <p class="kicker">3D Car Showcase</p>
+          <h2>Interactive Model Viewer</h2>
+        </div>
+        <p class="lead">Meet our car, Hercules.</p>
+        <a class="button-link hercules-link" href="car.html">Open The Hercules Page</a>
+      </section>
+
+      <section id="team" class="section reveal">
+        <div class="section-head">
+          <p class="kicker">About Us</p>
+          <h2>Team Members</h2>
+        </div>
+        <div class="team-grid">
+          <article class="member-card interactive-3d"><img src="assets/parth.svg" alt="Parth Purohit" loading="lazy" /><h3>Parth Purohit</h3><p class="role">Team Manager</p><a class="button-link ghost member-link" href="member-parth.html">View Profile</a></article>
+          <article class="member-card interactive-3d"><img src="assets/junhyuk.svg" alt="Junhyuk Moon" loading="lazy" /><h3>Junhyuk Moon</h3><p class="role">Graphic Designer</p><a class="button-link ghost member-link" href="member-junhyuk.html">View Profile</a></article>
+          <article class="member-card interactive-3d"><img src="assets/fadi.svg" alt="Fadi Mohammed Shebeaun" loading="lazy" /><h3>Fadi Mohammed Shebeaun</h3><p class="role">Design Engineer</p><a class="button-link ghost member-link" href="member-fadi.html">View Profile</a></article>
+          <article class="member-card interactive-3d"><img src="assets/abdulrahman.svg" alt="AbdulRahman Ahmed" loading="lazy" /><h3>AbdulRahman Ahmed</h3><p class="role">Research and Development Manager</p><a class="button-link ghost member-link" href="member-abdulrahman.html">View Profile</a></article>
+          <article class="member-card interactive-3d"><img src="assets/ari.svg" alt="Ari Malhotra" loading="lazy" /><h3>Ari Malhotra</h3><p class="role">Marketing Manager</p><a class="button-link ghost member-link" href="member-ari.html">View Profile</a></article>
+          <article class="member-card interactive-3d"><img src="assets/dave.svg" alt="Dave Jacob Sathrathil" loading="lazy" /><h3>Dave Jacob Sathrathil</h3><p class="role">Production Engineer</p><a class="button-link ghost member-link" href="member-dave.html">View Profile</a></article>
+        </div>
+      </section>
+
+      <section id="sponsors" class="section reveal">
+        <div class="section-head">
+          <p class="kicker">Partners</p>
+          <h2>Sponsorship Packages</h2>
+          <p class="lead">Placeholder rewards for now, styled like premium sponsor tiers with animated glow and tier-specific accents.</p>
+        </div>
+        <div class="sponsor-tier-grid">
+          <article class="tier-card tier-core interactive-3d">
+            <div class="tier-header">
+              <div>
+                <p class="tier-label">Bronze Tier</p>
+                <h3>Core</h3>
+              </div>
+              <div class="tier-icon">✦</div>
+            </div>
+            <p class="tier-summary">Perfect for local businesses wanting to show support.</p>
+            <ul class="reward-list">
+              <li>Certificate of appreciation</li>
+              <li>Logo on website</li>
+              <li>Social media shoutout</li>
+              <li>Logo on team merchandise</li>
+            </ul>
+          </article>
+
+          <article class="tier-card tier-plus interactive-3d">
+            <div class="tier-header">
+              <div>
+                <p class="tier-label">Silver Tier</p>
+                <h3>Plus</h3>
+              </div>
+              <div class="tier-icon">＋</div>
+            </div>
+            <p class="tier-summary">A stronger package for growing brands and partner visibility.</p>
+            <ul class="reward-list">
+              <li>Certificate of appreciation</li>
+              <li>Logo on website</li>
+              <li>Logo on team merchandise</li>
+              <li>Dedicated social post</li>
+              <li>Logo on pit display</li>
+            </ul>
+          </article>
+
+          <article class="tier-card tier-pro interactive-3d">
+            <div class="tier-header">
+              <div>
+                <p class="tier-label">Gold Tier</p>
+                <h3>Pro</h3>
+              </div>
+              <div class="tier-icon">🏆</div>
+            </div>
+            <p class="tier-summary">Directly support our car's R&amp;D, manufacturing, and testing.</p>
+            <ul class="reward-list">
+              <li>Certificate of appreciation</li>
+              <li>Logo on website</li>
+              <li>Logo on car side / front</li>
+              <li>Logo on pit display</li>
+              <li>Access to team technical updates</li>
+            </ul>
+          </article>
+
+          <article class="tier-card tier-elite interactive-3d">
+            <div class="tier-header">
+              <div>
+                <p class="tier-label">Platinum Tier</p>
+                <h3>Elite</h3>
+              </div>
+              <div class="tier-icon">♕</div>
+            </div>
+            <p class="tier-summary">Become a foundational partner of the team with priority placement.</p>
+            <ul class="reward-list">
+              <li>Certificate of appreciation</li>
+              <li>Priority logo on website</li>
+              <li>Main body logo on car</li>
+              <li>Logo on pit display</li>
+              <li>Premium team recognition</li>
+              <li>Prime partner recognition</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="sponsor-enquiry">
+          <div class="section-head">
+            <p class="kicker">Sponsor Enquiry</p>
+            <h3>Send us a message</h3>
+            <p class="lead">If your company wants to collaborate, this is the place to start.</p>
+          </div>
+
+        <form id="sponsor-form" class="contact-form sponsor-form" action="mailto:team@arionracing.example" method="post" enctype="text/plain">
+          <label>Company Name<input type="text" name="company" required /></label>
+          <label>Contact Person<input type="text" name="contact" required /></label>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Sponsorship Interest
+            <select name="interest" required>
+              <option value="">Select one</option>
+              <option>Core / Bronze Tier</option>
+              <option>Plus / Silver Tier</option>
+              <option>Pro / Gold Tier</option>
+              <option>Elite / Platinum Tier</option>
+              <option>Custom Partnership</option>
+            </select>
+          </label>
+          <label class="full">Message<textarea rows="5" name="message" required></textarea></label>
+          <button type="submit">Send Enquiry</button>
+        </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <div class="footer-brand">
+        <img class="logo-mark footer-logo" src="assets/arion-racing.png" alt="Arion Racing logo" />
+        <div>
+          <p>Arion Racing | Stem Racing</p>
+          <p class="muted">Arion Gold #F0B653 | Arion Black #000000</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

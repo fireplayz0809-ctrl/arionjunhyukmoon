@@ -1,0 +1,482 @@
+body.car-page {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(240, 182, 83, 0.1), transparent 22%),
+    radial-gradient(circle at 82% 16%, rgba(77, 103, 255, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.04), transparent 18%),
+    linear-gradient(180deg, #050508 0%, #09090f 54%, #050507 100%);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body.car-page #particle-field {
+  opacity: 0.58;
+  mix-blend-mode: screen;
+}
+
+body.car-page #scroll-progress {
+  background: linear-gradient(90deg, #4d67ff, #f0b653);
+  height: 3px;
+}
+
+body.car-page .site-header {
+  background: rgba(6, 7, 11, 0.64);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body.car-page .kicker,
+body.car-page .top-nav a,
+body.car-page .stat-label,
+body.car-page .role,
+body.car-page .muted {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body.car-page .top-nav a {
+  border-bottom-color: transparent;
+}
+
+body.car-page .top-nav a:hover,
+body.car-page .top-nav a.active {
+  color: #f0b653;
+  border-bottom-color: #f0b653;
+}
+
+body.car-page .button-link {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border-color: rgba(240, 182, 83, 0.42);
+}
+
+body.car-page .button-link:hover {
+  background: rgba(240, 182, 83, 0.14);
+}
+
+body.car-page .button-link.ghost {
+  background: transparent;
+}
+
+body.car-page .car-main {
+  width: min(1360px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  padding: 1.2rem 0 3.4rem;
+}
+
+body.car-page .section {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+body.car-page .car-hero {
+  text-align: center;
+}
+
+body.car-page .car-eyebrow {
+  margin: 0;
+  color: rgba(240, 182, 83, 0.82);
+  font-family: "Test Sohne", "IBM Plex Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.8rem;
+}
+
+body.car-page .car-title {
+  margin: 0.35rem 0 0;
+  font-family: "Test Sohne Breit", "IBM Plex Sans", sans-serif;
+  font-size: clamp(3.3rem, 10vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  color: #ffffff;
+}
+
+body.car-page .car-title span {
+  color: #f0b653;
+  text-shadow: 0 0 18px rgba(240, 182, 83, 0.2);
+}
+
+body.car-page .car-lead {
+  max-width: 58ch;
+  margin: 0.9rem auto 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
+  line-height: 1.7;
+}
+
+body.car-page .car-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: "Test Sohne", "IBM Plex Sans", sans-serif;
+  font-size: 0.78rem;
+}
+
+body.car-page .car-status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4ef08a;
+  box-shadow: 0 0 0 6px rgba(78, 240, 138, 0.12), 0 0 18px rgba(78, 240, 138, 0.45);
+}
+
+body.car-page .car-shell {
+  position: relative;
+  min-height: clamp(540px, 74vh, 800px);
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(77, 103, 255, 0.12), transparent 34%),
+    radial-gradient(circle at 50% 90%, rgba(240, 182, 83, 0.08), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  box-shadow: 0 36px 100px rgba(0, 0, 0, 0.58);
+}
+
+body.car-page .car-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 42px 100%;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+body.car-page .car-gate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: min(520px, 86vw);
+  padding: 2rem;
+  border: 1px solid rgba(77, 103, 255, 0.36);
+  border-radius: 34px;
+  background: rgba(0, 0, 0, 0.86);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 0 38px rgba(77, 103, 255, 0.22),
+    0 0 60px rgba(240, 182, 83, 0.08);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+}
+
+body.car-page .car-gate.is-unlocked {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -52%) scale(0.96);
+}
+
+body.car-page .gate-label {
+  margin: 0;
+  color: rgba(240, 182, 83, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-family: "Test Sohne", "IBM Plex Sans", sans-serif;
+  font-size: 0.75rem;
+}
+
+body.car-page .car-gate h3 {
+  margin: 0.85rem 0 0.5rem;
+  color: #ffffff;
+  font-family: "Test Sohne Breit", "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  line-height: 1;
+}
+
+body.car-page .car-gate p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+body.car-page .gate-form {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.35rem;
+}
+
+body.car-page .gate-form input {
+  border: 1px solid rgba(77, 103, 255, 0.32);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 1rem 1.1rem;
+}
+
+body.car-page .gate-form input::placeholder {
+  color: rgba(255, 255, 255, 0.26);
+}
+
+body.car-page .gate-form button {
+  width: 100%;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #4d67ff, #f0b653);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 36px rgba(77, 103, 255, 0.24);
+}
+
+body.car-page .gate-foot {
+  margin-top: 0.9rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+body.car-page .car-model-stage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+body.car-page .car-model-stage.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.car-page .car-viewer-wrap {
+  width: min(980px, 88vw);
+  min-height: 540px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(77, 103, 255, 0.12), transparent 28%),
+    rgba(0, 0, 0, 0.68);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 0 50px rgba(77, 103, 255, 0.08),
+    0 0 70px rgba(240, 182, 83, 0.06);
+}
+
+body.car-page .model-viewer {
+  min-height: 540px;
+}
+
+body.car-page .model-fallback {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body.car-page .specs-section {
+  padding-top: 0.5rem;
+}
+
+body.car-page .detail-section {
+  padding-top: 0.2rem;
+}
+
+body.car-page .section-head {
+  margin-bottom: 1rem;
+}
+
+body.car-page .section-head h2 {
+  color: #ffffff;
+  margin-top: 0.35rem;
+}
+
+body.car-page .spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+body.car-page .spec-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+}
+
+body.car-page .spec-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(77, 103, 255, 0.12), transparent 50%);
+  pointer-events: none;
+}
+
+body.car-page .spec-badge {
+  margin: 0 0 0.8rem;
+  color: rgba(240, 182, 83, 0.86);
+  font-family: "Test Sohne", "IBM Plex Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.74rem;
+}
+
+body.car-page .spec-card h3 {
+  margin: 0 0 0.55rem;
+  color: #ffffff;
+  font-family: "Test Sohne Breit", "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.02;
+}
+
+body.car-page .spec-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+}
+
+body.car-page .detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+body.car-page .detail-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 210px;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(77, 103, 255, 0.12), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+}
+
+body.car-page .detail-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -12% -26% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 182, 83, 0.16), transparent 68%);
+  pointer-events: none;
+}
+
+body.car-page .detail-tag {
+  margin: 0 0 0.72rem;
+  color: rgba(240, 182, 83, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-family: "Test Sohne", "IBM Plex Sans", sans-serif;
+  font-size: 0.72rem;
+}
+
+body.car-page .detail-card h3 {
+  margin: 0 0 0.5rem;
+  color: #ffffff;
+  font-family: "Test Sohne Breit", "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.02;
+}
+
+body.car-page .detail-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+body.car-page .build-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+body.car-page .build-story {
+  padding: 0.25rem 0 0;
+}
+
+body.car-page .build-story h2 {
+  margin: 0.25rem 0 0.75rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.96;
+}
+
+body.car-page .build-text {
+  max-width: 58ch;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  margin-bottom: 1.15rem;
+}
+
+body.car-page .build-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+body.car-page .build-card {
+  padding: 1.1rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.car-page .build-card h3 {
+  margin: 0 0 0.4rem;
+  color: #ffffff;
+  font-family: "Test Sohne Breit", "IBM Plex Sans", sans-serif;
+}
+
+body.car-page .build-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.62;
+}
+
+body.car-page .site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.car-page .site-footer p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body.car-page .site-footer .muted {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+@media (max-width: 1060px) {
+  body.car-page .spec-grid,
+  body.car-page .build-grid,
+  body.car-page .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  body.car-page .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body.car-page .car-shell,
+  body.car-page .car-viewer-wrap {
+    min-height: 460px;
+  }
+
+  body.car-page .car-gate {
+    padding: 1.5rem;
+  }
+}
